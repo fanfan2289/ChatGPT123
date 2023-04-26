@@ -39,9 +39,7 @@ const getContainerClass = computed(() => {
       <NLayout class="z-40 transition" :class="getContainerClass" has-sider>
         <Sider />
         <NLayoutContent class="h-full">
-				<img src="./test.jpg" alt="your-image-alt-text" width="400" height="300">
           <RouterView v-slot="{ Component, route }">
-					<img src="./test.jpg" alt="your-image-alt-text" width="400" height="300">
             <component :is="Component" :key="route.fullPath" />
           </RouterView>
         </NLayoutContent>
