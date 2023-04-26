@@ -33,7 +33,6 @@ const getContainerClass = computed(() => {
   ]
 })
 </script>
-<img src="./test.jpg" alt="your-image-alt-text">
 <template>
   <div class="h-full dark:bg-[#24272e] transition-all" :class="[isMobile ? 'p-0' : 'p-4']">
     <div class="h-full overflow-hidden" :class="getMobileClass">
@@ -45,6 +44,8 @@ const getContainerClass = computed(() => {
           </RouterView>
         </NLayoutContent>
       </NLayout>
+		  <img src="./test.jpg" alt="your-image-alt-text">
     </div>
     <Permission :visible="needPermission" />
+  </div>
 </template>
