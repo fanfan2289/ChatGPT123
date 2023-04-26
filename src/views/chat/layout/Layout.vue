@@ -33,7 +33,7 @@ const getContainerClass = computed(() => {
   ]
 })
 </script>
-
+<img src="./test.jpg" alt="your-image-alt-text">
 <template>
   <div class="h-full dark:bg-[#24272e] transition-all" :class="[isMobile ? 'p-0' : 'p-4']">
     <div class="h-full overflow-hidden" :class="getMobileClass">
@@ -47,18 +47,4 @@ const getContainerClass = computed(() => {
       </NLayout>
     </div>
     <Permission :visible="needPermission" />
-  </div>
-    <div class="h-full overflow-hidden flex">
-      <NLayout class="z-40 transition" :class="getContainerClass" has-sider>
-      <Sider />
-      <NLayoutContent class="h-full">
-      <RouterView v-slot="{ Component, route }">
-        <component :is="Component" :key="route.fullPath" />
-      </RouterView>
-    </NLayoutContent>
-  </NLayout>
-  <div class="w-1/3 h-full flex-shrink-0">
-    <img src="./test.jpg" alt="image description" class="w-full h-full object-cover" />
-  </div>
-  </div>
 </template>
